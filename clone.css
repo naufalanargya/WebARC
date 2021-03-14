@@ -1,0 +1,181 @@
+/* Naufal Bhanu Anargyarahman (16520102) */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-image: url("https://ditsti.itb.ac.id/wp-content/uploads/2020/09/logo_itb_1024.png");
+  background-size: 40%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #7CB9E8;
+  image
+}
+
+.darkmode {
+  background-color: #202020;
+}
+
+.button_darkmode {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+}
+nav {
+  height: 80px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  padding: 2vw;
+  font-size: small;
+}
+
+nav > * {
+  margin: 5px;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav img {
+  height: 5vh;
+  width: 5vh;
+  background-color: #333;
+  border-radius: 50%;
+}
+
+form {
+  width: 55vw;
+}
+
+.main-logo {
+  width: 100%;
+  padding: 0 20% 5vh;
+  transform: scale(1);
+  transition: 500ms;
+}
+
+.main-logo:hover{
+  transform: scale(1.5);
+}
+.buttons {
+  display: flex ;
+  width: 100%;
+  justify-content: center;
+}
+
+.icon {
+    position: absolute;
+    top: 25%;
+    opacity: 0.35;
+}
+
+.mic-icon {
+    right:20px;
+    
+}
+
+.group 			  { 
+  position:relative; 
+  margin-bottom:45px; 
+}
+input 				{
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:350px;
+  border:none;
+  border-bottom:1px solid #757575;
+
+}
+input:focus 		{ outline:none; }
+
+/* LABEL ======================================= */
+label 				 {
+  color:#999; 
+  font-size:18px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:5px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+  top:-20px;
+  font-size:14px;
+  color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{ position:relative; display:block; width:300px; }
+.bar:before, .bar:after 	{
+  content:'';
+  height:2px; 
+  width:0;
+  bottom:1px; 
+  position:absolute;
+  background:#5264AE; 
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+  
+}
+.bar:before {
+  left:50%;
+}
+.bar:after {
+  right:50%; 
+}
+
+/* active state */
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+  from { background:#5264AE; }
+  to 	{ width:0; background:transparent; }
+}
